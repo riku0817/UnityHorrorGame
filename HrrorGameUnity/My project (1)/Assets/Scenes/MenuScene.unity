@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Option: {fileID: 571301656}
+  FPSController: {fileID: 0}
 --- !u!1 &797832966
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,8 +599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -592.46, y: 119}
-  m_SizeDelta: {x: 552.0953, y: 182.54}
+  m_AnchoredPosition: {x: -802.5852, y: 158.66522}
+  m_SizeDelta: {x: 131.845, y: 103.2096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122652673
 MonoBehaviour:
@@ -1863,9 +1864,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -9002462075064416995, guid: 392414ca2f6ac254dab642c1fec139db, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f5e6be81d77a9c041978ae0063b5a198, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 16ae5092615271b4f923a98a99c6eebe, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

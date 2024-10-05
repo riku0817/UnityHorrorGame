@@ -2,54 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class GameManager : MonoBehaviour
 {
     bool optionbool = false;
     [SerializeField] GameObject Option;
+    [SerializeField] GameObject FPSController;
+
     public void StartButton()
     {
+        // ゲームスタートボタン
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("HospitalScene");
+        Cursor.visible = false;
+
     }
 
     public void ReturnMenuButton()
     {
+        //メニュー画面に戻るボタン
         SceneManager.LoadScene("MenuScene");
         Option.SetActive(false);
         optionbool = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
-        public void GameExitButton()
+    public void GameExitButton()
     {
-       Application.Quit();
+        //ゲーム終了ボタン
+        Application.Quit();
     }
     public void ShowOption()
     {
+        //オプション表示ボタン
         Option.SetActive(true);
         optionbool = true;
     }
     public void HideOption()
     {
+        //オプション非表示メゾット
         Option.SetActive(false);
         optionbool = false;
     }
 
-    //ESCオプション画面表示
+    public void InGameShowOption()
+    {
+        //ゲーム内オプション表示メソッド
+        var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
+        Option.SetActive(true);
+        optionbool = true;
+        firstpersoncontroller.enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void InGameHideOption()
+    {
+        //ゲーム内オプション非表示メソッド
+        var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
+        Option.SetActive(false);
+        optionbool = false;
+        firstpersoncontroller.enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        //ESCオプション画面表示 ※メニュー画面以外のシーンで有効
+        if (SceneManager.GetActiveScene().name != "MenuScene" && Input.GetKeyDown(KeyCode.Escape))
         {
             if (optionbool == false)
             {
-                Option.SetActive(true);
-                optionbool = true;
+                InGameShowOption();
             }
             else if (optionbool == true)
             {
-                Option.SetActive(false);
-                optionbool = false;
+                InGameHideOption();
             }
 
 
         }
     }
+
 }
