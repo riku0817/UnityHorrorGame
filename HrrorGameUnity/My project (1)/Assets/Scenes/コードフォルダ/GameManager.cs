@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     bool optionbool = false;
     [SerializeField] GameObject Option;
     [SerializeField] GameObject FPSController;
+    [SerializeField] GameObject Reticle;
 
     public void StartButton()
     {
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         firstpersoncontroller.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Reticle.SetActive(false);
     }
     public void InGameHideOption()
     {
@@ -65,7 +67,11 @@ public class GameManager : MonoBehaviour
         firstpersoncontroller.enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Reticle.SetActive(true);
     }
+
+
+    //ゲーム内で常にループしてるメソッド
     void Update()
     {
         //ESCオプション画面表示 ※メニュー画面以外のシーンで有効
