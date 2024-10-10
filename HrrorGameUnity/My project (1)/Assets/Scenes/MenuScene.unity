@@ -324,6 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Option: {fileID: 571301656}
   FPSController: {fileID: 0}
+  Reticle: {fileID: 0}
 --- !u!1 &797832966
 GameObject:
   m_ObjectHideFlags: 0
