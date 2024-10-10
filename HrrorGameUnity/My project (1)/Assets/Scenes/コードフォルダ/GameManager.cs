@@ -66,10 +66,7 @@ public class GameManager : MonoBehaviour
         Reticle.SetActive(true);
     }
 
-    public void DoorAnimation()
-    {
-        
-    }
+    
 
     //ゲーム内で常にループしてるメソッド
     void Update()
