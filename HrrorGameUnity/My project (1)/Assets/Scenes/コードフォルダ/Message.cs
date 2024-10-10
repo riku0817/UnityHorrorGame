@@ -2,15 +2,17 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Message : MonoBehaviour
 {
-
+    [SerializeField] GameObject FPSController;
     //　メッセージUI
     private Text messageText;
     //　表示するメッセージ
     [SerializeField]
     [TextArea(1, 20)]
+
     private string allMessage = "今回はRPGでよく使われるメッセージ表示機能を作りたいと思います。\n"
             + "メッセージが表示されるスピードの調節も可能であり、改行にも対応します。\n"
             + "改善の余地がかなりありますが、               最低限の機能は備えていると思われます。\n"
@@ -54,6 +56,8 @@ public class Message : MonoBehaviour
 
     void Start()
     {
+        var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
+        firstpersoncontroller.enabled = false;
         clickIcon = transform.Find("Panel/Image").GetComponent<Image>();
         clickIcon.enabled = false;
         messageText = GetComponentInChildren<Text>();
@@ -72,6 +76,8 @@ public class Message : MonoBehaviour
         //　1回に表示するメッセージを表示していない	
         if (!isOneMessage)
         {
+
+
             //　テキスト表示時間を経過したらメッセージを追加
             if (elapsedTime >= textSpeed)
             {
@@ -122,6 +128,9 @@ public class Message : MonoBehaviour
                 //　メッセージが全部表示されていたらゲームオブジェクト自体の削除
                 if (messageNum >= splitMessage.Length)
                 {
+
+                    var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
+                    firstpersoncontroller.enabled = true;
                     isEndMessage = true;
                     transform.GetChild(0).gameObject.SetActive(false);
                 }

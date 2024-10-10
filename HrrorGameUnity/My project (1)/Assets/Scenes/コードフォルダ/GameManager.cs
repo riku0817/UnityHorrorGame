@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
         // ゲームスタートボタン
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("HospitalScene");
-        Cursor.visible = false;
 
     }
 
@@ -26,7 +25,6 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
         Option.SetActive(false);
         optionbool = false;
-        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     public void GameExitButton()
@@ -54,7 +52,6 @@ public class GameManager : MonoBehaviour
         Option.SetActive(true);
         optionbool = true;
         firstpersoncontroller.enabled = false;
-        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Reticle.SetActive(false);
     }
@@ -65,7 +62,6 @@ public class GameManager : MonoBehaviour
         Option.SetActive(false);
         optionbool = false;
         firstpersoncontroller.enabled = true;
-        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Reticle.SetActive(true);
     }
