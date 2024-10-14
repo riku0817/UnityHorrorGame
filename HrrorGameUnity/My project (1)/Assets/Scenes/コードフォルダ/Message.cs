@@ -7,6 +7,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class Message : MonoBehaviour
 {
     [SerializeField] GameObject FPSController;
+    [SerializeField] GameObject flashlight;
     //　メッセージUI
     private Text messageText;
     //　表示するメッセージ
@@ -58,6 +59,8 @@ public class Message : MonoBehaviour
     {
         var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
         firstpersoncontroller.enabled = false;
+        var flashlightcomponent = flashlight.GetComponent<FlashLight>();
+        flashlightcomponent.enabled = false;
         clickIcon = transform.Find("Panel/Image").GetComponent<Image>();
         clickIcon.enabled = false;
         messageText = GetComponentInChildren<Text>();
@@ -131,6 +134,8 @@ public class Message : MonoBehaviour
 
                     var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
                     firstpersoncontroller.enabled = true;
+                    var flashlightcomponent = flashlight.GetComponent<FlashLight>();
+                    flashlightcomponent.enabled = true;
                     isEndMessage = true;
                     transform.GetChild(0).gameObject.SetActive(false);
                 }

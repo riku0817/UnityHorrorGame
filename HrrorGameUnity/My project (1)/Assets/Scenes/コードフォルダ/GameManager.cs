@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         Reticle.SetActive(true);
     }
 
-    
+
 
     //ゲーム内で常にループしてるメソッド
     void Update()
@@ -85,6 +85,14 @@ public class GameManager : MonoBehaviour
 
 
         }
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 10.0f))
+        {
+
+        }
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.red, 5);
     }
 
 }
