@@ -739,7 +739,9 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Android: CROSS_PLATFORM_INPUT
-    Standalone: CROSS_PLATFORM_INPUT
+    Server: PROBUILDER_EXPERIMENTAL_FEATURES
+    Standalone: CROSS_PLATFORM_INPUT;PROBUILDER_EXPERIMENTAL_FEATURES
+    WebGL: PROBUILDER_EXPERIMENTAL_FEATURES
     iPhone: CROSS_PLATFORM_INPUT
   additionalCompilerArguments: {}
   platformArchitecture: {}
