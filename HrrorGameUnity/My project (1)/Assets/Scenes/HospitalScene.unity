@@ -7161,7 +7161,7 @@ MonoBehaviour:
   destroyPhysicsTime: 0
   destroyColliderWithPhysics: 0
   destroySplintersTime: 0
-  breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
+  breakingSound: {fileID: 8300000, guid: d1126d9278b52f44dbaf6665bf28f9d7, type: 3}
   isBroken: 0
   splinters: []
 --- !u!1001 &882238247
