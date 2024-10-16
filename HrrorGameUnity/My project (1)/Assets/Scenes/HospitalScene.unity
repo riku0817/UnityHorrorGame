@@ -3909,15 +3909,15 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 2
-  partsX: 8
-  partsY: 8
+  partsX: 10
+  partsY: 10
   preCalculate: 1
   addTorques: 1
   hideSplintersInHierarchy: 1
   useCollision: 1
   health: 0
-  destroyPhysicsTime: 10
-  destroyColliderWithPhysics: 1
+  destroyPhysicsTime: 0
+  destroyColliderWithPhysics: 0
   destroySplintersTime: 0
   breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
   isBroken: 0
@@ -4077,7 +4077,7 @@ Transform:
   m_GameObject: {fileID: 528201385}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 1.654, z: -5.962}
+  m_LocalPosition: {x: -0.059999943, y: 1.654, z: -5.9599986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5008,7 +5008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.04
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5016,7 +5016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6884,7 +6884,7 @@ Transform:
   m_GameObject: {fileID: 880963964}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.060000274, y: 0.5510869, z: -5.962}
+  m_LocalPosition: {x: -0.06, y: 0.5510869, z: -5.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6902,7 +6902,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7051,15 +7051,15 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 2
-  partsX: 8
-  partsY: 8
+  partsX: 10
+  partsY: 10
   preCalculate: 1
   addTorques: 1
   hideSplintersInHierarchy: 1
   useCollision: 1
   health: 0
-  destroyPhysicsTime: 10
-  destroyColliderWithPhysics: 1
+  destroyPhysicsTime: 0
+  destroyColliderWithPhysics: 0
   destroySplintersTime: 0
   breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
   isBroken: 0
@@ -8638,7 +8638,7 @@ Transform:
   m_GameObject: {fileID: 1153216728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.059355497, y: 1.654, z: 0}
+  m_LocalPosition: {x: -0.05935526, y: 1.654, z: 0.002001334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8805,15 +8805,15 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 2
-  partsX: 8
-  partsY: 8
+  partsX: 10
+  partsY: 10
   preCalculate: 1
   addTorques: 1
   hideSplintersInHierarchy: 1
   useCollision: 1
   health: 0
-  destroyPhysicsTime: 10
-  destroyColliderWithPhysics: 1
+  destroyPhysicsTime: 0
+  destroyColliderWithPhysics: 0
   destroySplintersTime: 0
   breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
   isBroken: 0
@@ -12195,7 +12195,7 @@ Transform:
   m_GameObject: {fileID: 1615025142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.059355497, y: 0.5510869, z: 0}
+  m_LocalPosition: {x: -0.059360027, y: 0.5510869, z: 0.0020015067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12362,15 +12362,15 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 2
-  partsX: 8
-  partsY: 8
+  partsX: 10
+  partsY: 10
   preCalculate: 1
   addTorques: 1
   hideSplintersInHierarchy: 1
   useCollision: 1
   health: 0
-  destroyPhysicsTime: 10
-  destroyColliderWithPhysics: 1
+  destroyPhysicsTime: 0
+  destroyColliderWithPhysics: 0
   destroySplintersTime: 0
   breakingSound: {fileID: 8300000, guid: d1126d9278b52f44dbaf6665bf28f9d7, type: 3}
   isBroken: 0
@@ -14923,7 +14923,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 392414ca2f6ac254dab642c1fec139db, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15025,7 +15025,6 @@ MonoBehaviour:
   - {fileID: 880963969}
   - {fileID: 528201386}
   eventpanel: {fileID: 1875101913}
-  glassbreak: {fileID: 8300000, guid: d1126d9278b52f44dbaf6665bf28f9d7, type: 3}
   heartbeat: {fileID: 8300000, guid: 1c7e45b26b89a5448ab73c1ae4d958da, type: 3}
 --- !u!54 &1875101920
 Rigidbody:
@@ -15049,7 +15048,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126

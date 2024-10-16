@@ -6,7 +6,6 @@ public class Event1 : MonoBehaviour
 {
     [SerializeField] BreakableWindow[] BreakableObjects;
     [SerializeField] GameObject eventpanel;
-    public AudioClip glassbreak;
     public AudioClip heartbeat;
     AudioSource audioSource;
     
@@ -25,7 +24,6 @@ public class Event1 : MonoBehaviour
             Debug.Log("イベント発生");
             var eventScript = eventpanel.GetComponent<BoxCollider>();
             eventScript.enabled = false;
-            audioSource.PlayOneShot(glassbreak);
             audioSource.PlayOneShot(heartbeat);
         }
     }
