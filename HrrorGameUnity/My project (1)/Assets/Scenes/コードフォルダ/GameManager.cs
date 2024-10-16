@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject Option;
     [SerializeField] GameObject FPSController;
     [SerializeField] GameObject Reticle;
+    [SerializeField] GameObject FirstPersonCharacter;
 
     public void StartButton()
     {
@@ -49,21 +50,25 @@ public class GameManager : MonoBehaviour
     {
         //ゲーム内オプション表示メソッド
         var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
+        var capsulecollider = FirstPersonCharacter.GetComponent<CapsuleCollider>();
         Option.SetActive(true);
         optionbool = true;
         firstpersoncontroller.enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Reticle.SetActive(false);
+        capsulecollider.isTrigger=true;
     }
     public void InGameHideOption()
     {
         //ゲーム内オプション非表示メソッド
         var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
+        var capsulecollider = FirstPersonCharacter.GetComponent<CapsuleCollider>();
         Option.SetActive(false);
         optionbool = false;
         firstpersoncontroller.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Reticle.SetActive(true);
+        capsulecollider.isTrigger=false;
     }
 
 
