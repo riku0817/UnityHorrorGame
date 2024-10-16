@@ -16,7 +16,7 @@ public class Event1 : MonoBehaviour
         {
             foreach(var BreakObjects in BreakableObjects)
             {
-                if(BreakObjects.isBroken==false)
+                if(!BreakObjects.isBroken)
                 {
                     BreakObjects.breakWindow();
                 }

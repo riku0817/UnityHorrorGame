@@ -3919,7 +3919,7 @@ MonoBehaviour:
   destroyPhysicsTime: 10
   destroyColliderWithPhysics: 1
   destroySplintersTime: 0
-  breakingSound: {fileID: 0}
+  breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
   isBroken: 0
   splinters: []
 --- !u!82 &528201387
@@ -3934,7 +3934,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5008,7 +5008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.25
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5016,7 +5016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6902,7 +6902,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7061,7 +7061,7 @@ MonoBehaviour:
   destroyPhysicsTime: 10
   destroyColliderWithPhysics: 1
   destroySplintersTime: 0
-  breakingSound: {fileID: 0}
+  breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
   isBroken: 0
   splinters: []
 --- !u!1001 &882238247
@@ -8656,7 +8656,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8815,7 +8815,7 @@ MonoBehaviour:
   destroyPhysicsTime: 10
   destroyColliderWithPhysics: 1
   destroySplintersTime: 0
-  breakingSound: {fileID: 0}
+  breakingSound: {fileID: 8300000, guid: 5c2f5ca33485fbd42a9e7af0cf292651, type: 3}
   isBroken: 0
   splinters: []
 --- !u!1 &1173175408
@@ -12372,7 +12372,7 @@ MonoBehaviour:
   destroyPhysicsTime: 10
   destroyColliderWithPhysics: 1
   destroySplintersTime: 0
-  breakingSound: {fileID: 0}
+  breakingSound: {fileID: 8300000, guid: d1126d9278b52f44dbaf6665bf28f9d7, type: 3}
   isBroken: 0
   splinters: []
 --- !u!1 &1621765736
@@ -14923,7 +14923,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 392414ca2f6ac254dab642c1fec139db, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
