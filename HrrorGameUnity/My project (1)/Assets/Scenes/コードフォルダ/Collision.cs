@@ -9,13 +9,20 @@ public class MyScript : MonoBehaviour
   [SerializeField] GameObject clicktext;
   [SerializeField] GameObject message;
   // 当たっている時に呼ばれる関数
+  void OnCollisionEnter(Collision collision)
+    {
+       if (collision.gameObject.name == "FPSController")
+        {
+        var outline = Object.GetComponent<Outline>();
+        outline.enabled = true;
+        }
+    }
   void OnCollisionStay(Collision collision)
   {
     if (collision.gameObject.name == "FPSController")
     {
       clicktext.SetActive(true);
-      Debug.Log(collision.gameObject.name+"と衝突した"); // ログを表示する
-      Object.SetLayer(3);
+      Debug.Log(collision.gameObject.name + "と衝突した"); // ログを表示する
       if (Input.GetMouseButton(0))
       {
         Debug.Log("Clicked");
@@ -28,9 +35,10 @@ public class MyScript : MonoBehaviour
   //オブジェクトが離れた時
   void OnCollisionExit(Collision collision)
   {
+    var outline = Object.GetComponent<Outline>();
     clicktext.SetActive(false);
     Debug.Log("Leave"); // ログを表示する
-    Object.SetLayer(0);
+    outline.enabled = false;
   }
 }
 

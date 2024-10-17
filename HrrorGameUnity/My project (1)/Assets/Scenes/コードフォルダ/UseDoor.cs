@@ -15,17 +15,26 @@ public class UseDoor : MonoBehaviour
 
     public bool animationbool = true;
     // 当たっている時に呼ばれる関数
-    void OnCollisionStay(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "FPSController")
         {
-            anime = this.gameObject.GetComponent<Animation>();
-            audioSource = GetComponent<AudioSource>();
+        var outline = Object.GetComponent<Outline>();
+        outline.enabled = true;
+        }
+    }
+    void OnCollisionStay(Collision collision)
+    {
+
+        if (collision.gameObject.name == "FPSController")
+        {
             clicktext.SetActive(true);
             Debug.Log(collision.gameObject.name + "と衝突した"); // ログを表示する
-            Object.SetLayer(3);
+
             if (Input.GetMouseButton(0))
             {
+                anime = this.gameObject.GetComponent<Animation>();
+                audioSource = GetComponent<AudioSource>();
                 Debug.Log("Clicked");
                 // 暫定策：アニメーションを一回だけ再生
                 if (animationbool == true)
@@ -43,8 +52,9 @@ public class UseDoor : MonoBehaviour
     //オブジェクトが離れた時
     void OnCollisionExit(Collision collision)
     {
+        var outline = Object.GetComponent<Outline>();
         clicktext.SetActive(false);
         Debug.Log("Leave"); // ログを表示する
-        Object.SetLayer(0);
+        outline.enabled = false;
     }
 }
