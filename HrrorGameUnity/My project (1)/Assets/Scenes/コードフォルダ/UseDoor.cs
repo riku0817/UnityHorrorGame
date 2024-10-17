@@ -9,6 +9,10 @@ public class UseDoor : MonoBehaviour
     [SerializeField] GameObject clicktext;
     Animation anime;
     DoorAnimation dooranimationscript;
+
+    AudioSource audioSource;
+    public AudioClip doorOpenSound;
+
     public bool animationbool = true;
     // 当たっている時に呼ばれる関数
     void OnCollisionStay(Collision collision)
@@ -16,6 +20,7 @@ public class UseDoor : MonoBehaviour
         if (collision.gameObject.name == "FPSController")
         {
             anime = this.gameObject.GetComponent<Animation>();
+            audioSource = GetComponent<AudioSource>();
             clicktext.SetActive(true);
             Debug.Log(collision.gameObject.name + "と衝突した"); // ログを表示する
             Object.SetLayer(3);
@@ -25,6 +30,7 @@ public class UseDoor : MonoBehaviour
                 // 暫定策：アニメーションを一回だけ再生
                 if (animationbool == true)
                 {
+                    audioSource.PlayOneShot(doorOpenSound);
                     anime.Play();
                     animationbool = false;
                 }
