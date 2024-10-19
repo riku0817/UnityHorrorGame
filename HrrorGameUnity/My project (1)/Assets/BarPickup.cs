@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BarPickup : MonoBehaviour
 {
+    [SerializeField] GameObject clicktext;
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // 左クリック
@@ -22,6 +23,8 @@ public class BarPickup : MonoBehaviour
 
     void Pickup()
     {
+        
+        clicktext.SetActive(false);
         Debug.Log("バールを取得しました！");
         // バールを非表示にする場合
         gameObject.SetActive(false);

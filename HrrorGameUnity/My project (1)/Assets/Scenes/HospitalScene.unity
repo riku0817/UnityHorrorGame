@@ -2530,6 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effafa63e31b59e42b06491a20022643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clicktext: {fileID: 1698206522}
 --- !u!114 &193665219
 MonoBehaviour:
   m_ObjectHideFlags: 0

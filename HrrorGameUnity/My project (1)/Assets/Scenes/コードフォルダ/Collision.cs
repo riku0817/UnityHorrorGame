@@ -25,7 +25,6 @@ public class MyScript : MonoBehaviour
       Debug.Log(collision.gameObject.name + "と衝突した"); // ログを表示する
       if (Input.GetMouseButton(0))
       {
-        clicktext.SetActive(false);
         Debug.Log("Clicked");
         message.SetActive(true);
       }
