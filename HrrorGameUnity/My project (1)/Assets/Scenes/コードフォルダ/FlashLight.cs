@@ -8,7 +8,7 @@ public class FlashLight : MonoBehaviour
     AudioSource audioSource;
     
 
-    bool lightonoff = true;
+    public bool lightonoff = true;
     void Start()
     {
         //Componentを取得
