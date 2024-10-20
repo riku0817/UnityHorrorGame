@@ -9,7 +9,6 @@ public class UseDoor : MonoBehaviour
     [SerializeField] GameObject clicktext;
     Animation anime;
     DoorAnimation dooranimationscript;
-
     AudioSource audioSource;
     public AudioClip doorOpenSound;
 

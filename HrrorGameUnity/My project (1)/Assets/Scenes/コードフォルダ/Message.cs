@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Text.RegularExpressions;
 using UnityStandardAssets.Characters.FirstPerson;
+using Unity.VisualScripting;
 
 public class Message : MonoBehaviour
 {
@@ -49,6 +50,9 @@ public class Message : MonoBehaviour
     private Image clickIcon;
     //　クリックアイコンの点滅秒数
     [SerializeField]
+    GameObject eventObject;
+
+    [SerializeField] GameObject exiteventObject;
     private float clickFlashTime = 0.2f;
     //　1回分のメッセージを表示したかどうか
     private bool isOneMessage = false;
@@ -131,7 +135,10 @@ public class Message : MonoBehaviour
                 //　メッセージが全部表示されていたらゲームオブジェクト自体の削除
                 if (messageNum >= splitMessage.Length)
                 {
-
+                    var eventScript = eventObject.GetComponent<Event2>();
+                    eventScript.isMessageClosed=true;
+                    var eventScript2 = exiteventObject.GetComponent<ExitDoorScript>();
+                    eventScript2.isMessageClosed2=true;
                     var firstpersoncontroller = FPSController.GetComponent<FirstPersonController>();
                     firstpersoncontroller.enabled = true;
                     var flashlightcomponent = flashlight.GetComponent<FlashLight>();
